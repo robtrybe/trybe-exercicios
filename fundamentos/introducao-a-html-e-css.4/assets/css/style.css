@@ -1,0 +1,133 @@
+@charset "UTF-8";
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family:Oswald,'sans-serif';
+}
+
+.content{
+    max-width: 1024px;
+    width:100%;
+    margin:0 auto;
+}
+
+.menu{
+    padding-left:10px;
+}
+
+ .menu li{
+    display: inline-block;
+    list-style: none;
+    color:#fff;
+}
+
+.menu a{
+    text-decoration: none;
+    color:#fff;
+    font-size:1.3em;
+    display:inline-block;
+    padding:10px;
+}
+
+.menu a:hover{
+    background-color: #fff;
+    color:#3b7dd8;
+}
+
+.menu-container{
+    background-color: #3b7dd8;
+}
+
+.logo-container img{
+    width:200px;
+    display: inline-block;
+    padding:5px;
+}
+
+.cover{
+    position:relative;
+    min-height: 200px;
+    height:100%;
+    max-height:300px;
+    overflow: hidden;
+    background-image: url('../images/camarao2.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 0 -30px;
+}
+
+.cover .title{
+    font-size:1.2em;
+    font-weight:300;
+    position:absolute;
+    left:50%;
+    top:50%;
+    transform: translate(-50%,-50%);
+    color:rgba(255,255,255,.6)
+}
+
+.cover img{
+    width:100%;
+    height:100%;
+}
+
+.general-description{
+    padding:15px;
+    text-align: justify;
+    color:#666;
+}
+
+.general-description h2{
+    color:#64a1f4;
+}
+
+.classification{
+    list-style: none;
+    min-width:280px;
+    padding:20px;
+    background-color: #F2F3F4;
+    color:#666;
+}
+.classification h2{
+    color:#64a1f4;
+}
+
+.classification strong{
+    color:#64a1f4;
+}
+
+.classification li{
+    list-style: none;
+}
+
+.related-content{
+    width:100%;
+    padding:10px;
+}
+
+.related-content h2{
+    color:#64a1f4;
+}
+
+.related-content article{
+    float:left;
+    width:323px;
+    margin:0 auto;
+    padding:20px;
+    margin:5px;
+    text-align: justify;
+}
+
+.related-content article:nth-child(odd){
+    background-color: #F2F3F4;
+}
+
+footer{
+    clear:both;
+}
+
+
+
+
