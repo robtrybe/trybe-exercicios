@@ -40,7 +40,7 @@ if(salario <= 1903.98 ){
   console.log('O salário liquido é de '+ salario );
 }else{
   salario = salario - (( salario * aquilotaIR ) - parcela);
+  console.log('O salario liquido é de ' + salario);
 }
 
-console.log(salario);
 
