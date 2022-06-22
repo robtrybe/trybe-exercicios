@@ -1,4 +1,4 @@
-const angulo1 = -1;
+const angulo1 = 45;
 const angulo2 = 45;
 const angulo3 = 90;
 
