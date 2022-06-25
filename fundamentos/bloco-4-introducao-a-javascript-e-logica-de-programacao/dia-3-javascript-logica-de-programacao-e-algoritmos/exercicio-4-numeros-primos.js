@@ -27,4 +27,3 @@ for(let i = 0; i < numerosPrimos.length ;i++){
 }
 
 console.log('O maior numero primo entre 2 e 50 é o '+maiorNumero);
-
