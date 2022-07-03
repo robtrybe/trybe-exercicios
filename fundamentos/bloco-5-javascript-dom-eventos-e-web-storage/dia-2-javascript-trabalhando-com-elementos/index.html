@@ -57,7 +57,57 @@
   </head>
   <body>
     <script>
-      // COLOQUE SEU CÓDIGO AQUI
+
+      const bodyTag = document.getElementsByTagName('body')[0]
+      const headerTag = document.createElement('h1')
+
+      headerTag.innerText = 'Exercício 5.2 - JavaScript DOM';
+      bodyTag.appendChild(headerTag);
+
+      const mainTag = document.createElement('main');
+      mainTag.setAttribute('class','main-content');
+      bodyTag.appendChild(mainTag);
+
+      const sessionTag = document.createElement('section');
+      sessionTag.setAttribute('class','center-content');
+      mainTag.appendChild(sessionTag);
+
+      const pTag = document.createElement('p');
+      pTag.innerText = 'Hello World!';
+      sessionTag.appendChild(pTag);
+
+      const  session2 = document.createElement('section');
+      session2.setAttribute('class','left-content');
+      mainTag.appendChild(session2)
+      
+      const  session3 = document.createElement('section');
+      session3.setAttribute('class','right-content');
+      mainTag.appendChild(session3);
+
+      const img = document.createElement('img');
+      img.setAttribute('src','https://picsum.photos/200');
+      img.setAttribute('class','small-image');
+      session2.appendChild(img);
+
+      const list = document.createElement('ul');
+      const valores = ['zero','um','dois','tres','quatro','cinco','seis','sete','oito',
+        'nove','dez'];
+
+      for(let i = 1 ; i <= 10 ;i++){
+        let pTag = document.createElement('p');
+        pTag.innerText = valores[i];
+        list.appendChild(pTag);
+      }
+
+      session3.appendChild(list);
+
+      
+      for(let i= 1 ; i <= 3 ;i++){
+        const header3 = document.createElement('h3');
+        mainTag.appendChild(header3);
+      }
+
+
     </script>
   </body>
 </html>
