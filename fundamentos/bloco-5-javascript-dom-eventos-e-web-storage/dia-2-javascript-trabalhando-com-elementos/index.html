@@ -94,7 +94,7 @@
         'nove','dez'];
 
       for(let i = 1 ; i <= 10 ;i++){
-        let pTag = document.createElement('p');
+        let pTag = document.createElement('li');
         pTag.innerText = valores[i];
         list.appendChild(pTag);
       }
@@ -107,6 +107,23 @@
         mainTag.appendChild(header3);
       }
 
+      headerTag.className = 'title';
+
+      const tagsH3 = document.getElementsByTagName('h3')
+      for(let i = 0 ;i < tagsH3.length ; i++){
+        tagsH3[i].className = 'description';
+      }
+
+      mainTag.removeChild(session2);
+
+      sessionTag.style.marginRight = 'auto';
+      sessionTag.style.backgroundColor = 'green';
+
+      const li8 = document.getElementsByTagName('li')[8];
+      const li9 = document.getElementsByTagName('li')[9];
+      
+      list.removeChild(li8);
+      list.removeChild(li9);
 
     </script>
   </body>
