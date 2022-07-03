@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Exercício 5.2</title>
+    <style>
+      section {
+        border-color: black;
+        border-style: solid;
+      }
+
+      .title {
+        text-align: center;
+      }
+
+      .main-content {
+        background-color: yellow;
+      }
+
+      .main-content .center-content {
+        background-color: red;
+        width: 50%;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .main-content .center-content p {
+        font-style: italic;
+      }
+
+      .main-content .left-content {
+        background-color: green;
+        width: 60%;
+        margin-left: 0;
+        margin-right: auto;
+      }
+
+      .main-content .left-content .small-image {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: 100%;
+      }
+
+      .main-content .right-content {
+        background-color: blue;
+        width: 60%;
+        margin-left: auto;
+        margin-right: 0;
+      }
+
+      .main-content .description {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+
+      const bodyTag = document.getElementsByTagName('body')[0]
+      const headerTag = document.createElement('h1')
+
+      headerTag.innerText = 'Exercício 5.2 - JavaScript DOM';
+      bodyTag.appendChild(headerTag);
+
+      const mainTag = document.createElement('main');
+      mainTag.setAttribute('class','main-content');
+      bodyTag.appendChild(mainTag);
+
+      const sessionTag = document.createElement('section');
+      sessionTag.setAttribute('class','center-content');
+      mainTag.appendChild(sessionTag);
+
+      const pTag = document.createElement('p');
+      pTag.innerText = 'Hello World!';
+      sessionTag.appendChild(pTag);
+
+      const  session2 = document.createElement('section');
+      session2.setAttribute('class','left-content');
+      mainTag.appendChild(session2)
+      
+      const  session3 = document.createElement('section');
+      session3.setAttribute('class','right-content');
+      mainTag.appendChild(session3);
+
+      const img = document.createElement('img');
+      img.setAttribute('src','https://picsum.photos/200');
+      img.setAttribute('class','small-image');
+      session2.appendChild(img);
+
+      const list = document.createElement('ul');
+      const valores = ['zero','um','dois','tres','quatro','cinco','seis','sete','oito',
+        'nove','dez'];
+
+      for(let i = 1 ; i <= 10 ;i++){
+        let pTag = document.createElement('li');
+        pTag.innerText = valores[i];
+        list.appendChild(pTag);
+      }
+
+      session3.appendChild(list);
+
+      
+      for(let i= 1 ; i <= 3 ;i++){
+        const header3 = document.createElement('h3');
+        mainTag.appendChild(header3);
+      }
+
+      headerTag.className = 'title';
+
+      const tagsH3 = document.getElementsByTagName('h3')
+      for(let i = 0 ;i < tagsH3.length ; i++){
+        tagsH3[i].className = 'description';
+      }
+
+      mainTag.removeChild(session2);
+
+      sessionTag.style.marginRight = 'auto';
+      sessionTag.style.backgroundColor = 'green';
+
+      const li8 = document.getElementsByTagName('li')[8];
+      const li9 = document.getElementsByTagName('li')[9];
+      
+      list.removeChild(li8);
+      list.removeChild(li9);
+
+    </script>
+  </body>
+</html>
