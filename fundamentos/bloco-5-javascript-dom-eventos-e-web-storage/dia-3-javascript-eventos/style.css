@@ -152,3 +152,8 @@
     margin: 0px;
     padding: 10px 0;
   }
+
+  .holiday{
+    background-color: green;
+    color:#fff !important;
+  }
