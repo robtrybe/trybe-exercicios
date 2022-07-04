@@ -5,6 +5,7 @@ function loadApp() {
   createDays();
   createButtonHoliday('Feriados');
   holidayToggle();
+  createButtonFriday('Sexta-Feira');
 }
 
 function createDaysOfTheWeek() {
@@ -53,5 +54,13 @@ function holidayToggle() {
       if (day.innerText == 25) day.classList.toggle('holiday');
     }
   });
+}
+
+function createButtonFriday(label){
+  const btn = document.createElement('button');
+  btn.setAttribute('id','btn-friday');
+  btn.innerText = label;
+
+  document.querySelector('.buttons-container').appendChild(btn);
 }
 
