@@ -6,6 +6,7 @@ function loadApp() {
   createButtonHoliday('Feriados');
   holidayToggle();
   createButtonFriday('Sexta-Feira');
+  fridayToggle();
 }
 
 function createDaysOfTheWeek() {
@@ -56,11 +57,21 @@ function holidayToggle() {
   });
 }
 
-function createButtonFriday(label){
+function createButtonFriday(label) {
   const btn = document.createElement('button');
-  btn.setAttribute('id','btn-friday');
+  btn.setAttribute('id', 'btn-friday');
   btn.innerText = label;
 
   document.querySelector('.buttons-container').appendChild(btn);
+}
+
+function fridayToggle() {
+  const btnFriday = document.querySelector('#btn-friday');
+  btnFriday.addEventListener('click', () => {
+    const fridays = document.querySelectorAll('#days .friday');
+    for (let friday of fridays) {
+      friday.classList.toggle('friday');
+    }
+  })
 }
 
