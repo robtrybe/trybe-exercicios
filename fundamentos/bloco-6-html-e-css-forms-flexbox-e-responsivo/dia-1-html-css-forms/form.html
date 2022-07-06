@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de Viagem</title>
+</head>
+
+<body>
+    <main>
+        <header>
+            Formulário de Viagem
+        </header>
+        <form action="" method="post" enctype="multipart/form-data">
+            <fieldset>
+                <legend>Dados Pessoais</legend>
+                <label for="name">Nome:
+                    <input type="text" name="name" id="name" placeholder="Insira seu nome">
+                </label>
+                <br>
+                <label for="email">Email:
+                    <input type="email" name="email" id="email" placeholder="Informe se email">
+                </label>
+            </fieldset>
+            <fieldset>
+                <legend>Destino Favorito</legend>
+                <label>
+                    <input type="radio" name="destiny" class="destiny">Cidade
+                </label>
+                <label>
+                    <input type="radio" name="destiny" class="destiny">Campo
+                </label>
+                <label>
+                    <input type="radio" name="destiny" class="destiny">Praia
+                </label>
+                <label>
+                    <input type="radio" name="destiny" class="destiny">Montanhas
+                </label>
+            </fieldset>
+            <fieldset>
+                <legend>Porque eu devo ganhar?</legend>
+                <textarea id="why" maxlength="500" rows="5" placeholder="Motivos para premiação"></textarea>
+            </fieldset>
+            <fieldset>
+                <legend>Data para Viagem</legend>
+                <label>
+                    <input type="date" name="date" id="date">
+                </label>
+            </fieldset>
+            <fieldset>
+                <legend>Termos e Condições</legend>
+                <label>
+                    <input type="checkbox" name="terms">
+                    Gostaria de receber outras incríveis oportunidades oferecidas pela Trybe?
+                </label>
+                <br>
+                <label>
+                    <input type="checkbox" name="terms">
+                    Concordo que imagens das minhas férias poderão ser usadas na divulgação de concursos futuros.
+                </label>
+            </fieldset>
+            <button type="submit" name="send" id="send">Enviar</button>
+            <button type="button" name="clear" id="clear">Apagar</button>
+        </form>
+    </main>
+</body>
+
+</html>
