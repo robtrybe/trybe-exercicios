@@ -1,0 +1,104 @@
+@charset "UTF-8";
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: 'Oswald',sans-serif;
+}
+
+html{
+    height:100%;
+}
+
+body{
+    position: relative;
+    height:100%;
+    background-color: #036b52;
+    padding:0 10px;
+}
+
+.content{
+    max-width:1024px;
+    width:100%;
+    margin:0 auto;
+}
+
+.main-header{
+    padding:30px;
+    border-radius: 10px;
+    text-align: center;
+    margin:20px auto;
+    background-color: #fff;
+    color:#036b52;
+    border:1px solid #2fc18c;
+    font-weight: 300;
+    max-width: 600px;
+    width:100%;
+    font-size:1.2em;
+}
+
+form{
+    padding:20px;
+    background-color: #fff;
+    color:#036b52;
+    max-width: 600px;
+    width:100%;
+    margin:0 auto;
+    border-radius: 10px;
+}
+
+form fieldset{
+    padding:20px;
+    border:1px solid #036b52;
+    border-radius: 10px;
+}
+
+form legend{
+    font-size:1.2em;
+}
+
+form input[type='text'],form input[type='email']{
+    padding:10px;
+    border-radius: 10px;
+    border:1px solid #036b52;
+    width:100%;
+    font-size:1.2em;
+    background-color: #036b52;
+    color:#fff;
+}
+
+form *::placeholder{
+    color:#2fc18c;
+}
+
+form textarea{
+    width:100%;
+    max-width: 100%;
+    padding:10px;
+    background-color: #036b52;
+    font-size: 1.2em;
+    border-radius: 10px;
+    color:#fff;
+}
+
+form #send,form #clear{
+    padding:10px 40px;
+    border-radius: 5px;
+    margin:10px 5px;
+    font-size:1.2em;
+    cursor:pointer;
+}
+
+form #send{
+    background-color:#036b52;
+    color:#fff;
+    border:1px solid #036b52;
+}
+
+form #clear{
+    background-color: #0057e7;
+    color:#fff;
+    border:1px solid #0057e7;
+}
+

@@ -6,38 +6,38 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulário de Viagem</title>
+    <link rel="stylesheet" href="style.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="script.js"></script>
 </head>
 
 <body>
-    <main>
-        <header>
-            Formulário de Viagem
+    <main class="content">
+        <header class="main-header">
+            <h1>Trybe Trip</h1>
+            <p>Quer viajar sem pagar absolutamnte nada? Então preencha nosso formulário!</p>
         </header>
-        <form action="" method="post" enctype="multipart/form-data">
+        <form action="" method="GET" enctype="multipart/form-data">
             <fieldset>
                 <legend>Dados Pessoais</legend>
-                <label for="name">Nome:
-                    <input type="text" name="name" id="name" placeholder="Insira seu nome">
-                </label>
+                <label for="name">Nome: </label>
+                <input type="text" name="name" id="name" placeholder="Insira seu nome">
                 <br>
-                <label for="email">Email:
-                    <input type="email" name="email" id="email" placeholder="Informe se email">
-                </label>
+                <label for="email">Email: </label>
+                <input type="email" name="email" id="email" placeholder="Informe se email">
             </fieldset>
             <fieldset>
                 <legend>Destino Favorito</legend>
-                <label>
-                    <input type="radio" name="destiny" class="destiny">Cidade
-                </label>
-                <label>
-                    <input type="radio" name="destiny" class="destiny">Campo
-                </label>
-                <label>
-                    <input type="radio" name="destiny" class="destiny">Praia
-                </label>
-                <label>
-                    <input type="radio" name="destiny" class="destiny">Montanhas
-                </label>
+                <input type="radio" name="destiny" class="destiny" id="destiny">
+                <label for="destiny" >Cidade</label>
+                <input type="radio" name="destiny" class="destiny" id="camp">
+                <label for="camp">Campo</label>
+                <input type="radio" name="destiny" class="destiny" id="beach">
+                <label for="beach">Praia</label>
+                <input type="radio" name="destiny" class="destiny" id="montains">
+                <label for="montains">Montanhas</label>
             </fieldset>
             <fieldset>
                 <legend>Porque eu devo ganhar?</legend>
@@ -61,7 +61,7 @@
                     Concordo que imagens das minhas férias poderão ser usadas na divulgação de concursos futuros.
                 </label>
             </fieldset>
-            <button type="submit" name="send" id="send">Enviar</button>
+            <button type="submit" id="send">Enviar</button>
             <button type="button" name="clear" id="clear">Apagar</button>
         </form>
     </main>
