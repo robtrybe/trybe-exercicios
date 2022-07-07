@@ -1,11 +1,11 @@
 function formSubmit(event) {
-    event.preventDeafult();
-    alert('Formulario Submetido!');
+    event.preventDefault();
+    console.log('Formulario Submetido!');
 }
 
 function loadApp() {
-    const form = document.getElementById('send');
-    form.addEventListener('click', formSubmit);
+    const form = document.getElementsByTagName('form')[0];
+    form.addEventListener('submit', formSubmit);
 }
 
 window.addEventListener('load', loadApp);
