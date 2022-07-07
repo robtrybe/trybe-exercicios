@@ -33,7 +33,7 @@ body{
     color:#036b52;
     border:1px solid #2fc18c;
     font-weight: 300;
-    max-width: 600px;
+    max-width: 700px;
     width:100%;
     font-size:1.2em;
 }
@@ -42,7 +42,7 @@ form{
     padding:20px;
     background-color: #fff;
     color:#036b52;
-    max-width: 600px;
+    max-width: 700px;
     width:100%;
     margin:0 auto;
     border-radius: 10px;
