@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang='pt-BR'>
+<head>
+  <meta charset='UTF-8'>
+  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+  <title>Calculadora</title>
+</head>
+<body>
+  <p>Informe dois números para realizar a soma:</p>
+  <label for='value1'>Valor 1:</label>
+  <input type='text' id='value1'>
+  <label for='value2'>Valor 2:</label>
+  <input type='text' id='value2'>
+  <button id='button'>Somar</button>
+  <p id='result'></p>
+  <script>
+    const sum = (num1 , num2 )=>{
+        const number1 = parseInt(num1,10);
+        const number2 = parseInt(num2,10);
+
+        if(isNaN(number1) || isNaN(number2)){
+         throw new Error('Insira somente valores inteiros!');
+        }
+            
+        return number1 + number2;
+    }
+    
+    function initCalc() {
+      const value1 = document.getElementById('value1').value;
+      const value2 = document.getElementById('value2').value;
+      const result = 0;
+      try{
+        result =  sum(value1,value2);
+      }catch(error){
+        document.getElementsByTagName('p')[0].innerText = error.message;
+        console.log(error.stack);
+      }
+    }
+
+    const loadApp = ()=>{
+      const button = document.getElementById('button');
+      button.addEventListener('click', initCalc);
+    }
+
+    window.onload = loadApp;
+  </script>
+</body>
+</html>
