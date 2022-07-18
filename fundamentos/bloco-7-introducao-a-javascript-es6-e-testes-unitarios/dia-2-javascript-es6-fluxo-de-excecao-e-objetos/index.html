@@ -27,15 +27,18 @@
     }
     
     function initCalc() {
-      const value1 = document.getElementById('value1').value;
-      const value2 = document.getElementById('value2').value;
-      const result = 0;
+      let value1 = document.getElementById('value1');
+      let value2 = document.getElementById('value2');
+      let result = 0;
       try{
-        result =  sum(value1,value2);
+        result =  sum(value1.value,value2.value);
       }catch(error){
-        document.getElementsByTagName('p')[0].innerText = error.message;
-        console.log(error.stack);
+        document.getElementById('result').innerText = error.message;
+        return
+      }finally{
       }
+
+      document.getElementById('result').innerText = 'A soma de' + value1.value + ' + ' + value2.value + 'é igual a '+ result;
     }
 
     const loadApp = ()=>{
